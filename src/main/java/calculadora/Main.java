@@ -35,7 +35,8 @@ public class Main {
                     break;
                 case "P":
                 case "p":
-                    System.out.println("Aquí tiene que irse al menú del producto");
+                    System.out.println("Has seleccionado Producto");
+                    Producto.multiMenu();
                     break;
                 case "C":
                 case "c":
