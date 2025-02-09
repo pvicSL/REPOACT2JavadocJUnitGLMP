@@ -1,5 +1,6 @@
-package javabean;
+package calculadora;
 
+import calculadora.Cociente;
 
 import java.util.Scanner;
 
@@ -38,7 +39,8 @@ public class Main {
                     break;
                 case "C":
                 case "c":
-                    System.out.println("Aquí tiene que irse al menú del cociente");
+                    System.out.println("Has seleccionado Cociente:");
+                    Cociente.menuCociente();
                     break;
             }
         } while (!option.equalsIgnoreCase("F"));
