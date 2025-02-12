@@ -1,4 +1,4 @@
-package suma;
+package calculadora;
 import java.util.Scanner;
 
 public class Suma {  // Cambio de nombre de la clase
@@ -101,6 +101,4 @@ public class Suma {  // Cambio de nombre de la clase
 		return null;
 	}
 }
-}
 
-}
