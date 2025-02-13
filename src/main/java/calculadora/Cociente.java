@@ -37,7 +37,11 @@ public class Cociente {
                 break;
             case 2:
                 try {
-                    divisionEntero(); }
+                    System.out.println("Introduce el dividendo: ");
+                    int dividendoEntero = sc.nextInt();
+                    System.out.println("Introduce el divisor: ");
+                    int divisorEntero = sc.nextInt();
+                    divisionEntero(dividendoEntero, divisorEntero); }
                 catch (InputMismatchException e) {
                     System.out.println("Dato erróneo. No es un número real.");
                     //La línea siguiente limpia el flujo de entrada.
@@ -84,14 +88,12 @@ public class Cociente {
      * por el usuario. El bucle while blinda que el usuario no pueda meter nunca un cero como divisor.
      * Con InputMismatchException controlamos si el usuario pasa como parámetro un
      * número real.
+     * @param divisorEntero número entero introducido por el usuario.
+     * @param dividendoEntero número entero introducido por el usuario.
      * @return dividendoEntero / divisorEntero
      */
 
-    public static int divisionEntero() throws InputMismatchException{
-        System.out.println("Introduce el dividendo: ");
-        int dividendoEntero = sc.nextInt();
-        System.out.println("Introduce el divisor: ");
-        int divisorEntero = sc.nextInt();
+    public static int divisionEntero(int dividendoEntero, int divisorEntero) throws InputMismatchException{
         while (divisorEntero == 0) {
             System.out.println("Introduce otro número. El divisor no puede ser cero.");
             divisorEntero = sc.nextInt();
@@ -106,7 +108,7 @@ public class Cociente {
      * @return 1/numeroInverso.
      */
     public static double inversoReal(double numeroInverso) {
-        System.out.println("Resultado: " + numeroInverso);
+        System.out.println("Resultado: " + 1/numeroInverso);
         return 1/numeroInverso;
     }
 
@@ -122,7 +124,8 @@ public class Cociente {
             System.out.println("Introduce otro número. No se puede calcular la raíz de un número negativo.");
             raiz = sc.nextDouble();
         }
-        System.out.println("Resultado: " + raiz);
+        System.out.println("Resultado: " + Math.sqrt(raiz));
         return Math.sqrt(raiz);
+
     }
 }
