@@ -18,7 +18,7 @@ public class Suma {  // Cambio de nombre de la clase
             return primerNumero + segundoNumero + tercerNumero;  // Corregí la operación
         }
 
-        public double sumaValorAcumulado(double primerNumero) {
+       public double sumaValorAcumulado(double primerNumero) {
             return this.valorAcumulado + primerNumero;  // Ahora suma en vez de restar
         }
     }
