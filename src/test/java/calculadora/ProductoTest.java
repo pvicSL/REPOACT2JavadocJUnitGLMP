@@ -5,19 +5,25 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Clase de test mediante JUnit 5 destinada a probar los métodos de la clase Producto.
+ * @author Laura Vinseiro
+ * id id gitHub: Lauu92
+ * @version 1
+ */
 class ProductoTest {
 
-    @BeforeEach
+    /*@BeforeEach
     void setUp() {
-    }
+    }*/
 
-    @Test
+    /*@Test
     void main() {
-    }
+    }*/
 
-    @Test
+    /*@Test
     void multiMenu() {
-    }
+    }*/
 
     @Test
     void prod2reales() {
