@@ -15,7 +15,7 @@ public class Producto {
      * Opción 5 - salida del menú.
      *
      * @author Patricia Victoria Sanz Lopez
-     * @version 0.5
+     * @version 0.6
      * id gitHub: pvicSL
      */
 
@@ -116,8 +116,9 @@ public class Producto {
      * @param opreal2 debe ser un número real (con decimales)
      * El resultado se muestra acompañado de un texto (Resultado: ...)
      */
-    public static void prod2reales(double opreal1, double opreal2) {
+    public static double prod2reales(double opreal1, double opreal2) {
         System.out.println("Resultado: " + (opreal1 * opreal2) + "\n");
+        return (opreal1 * opreal2);
     }
 
     /**
@@ -127,8 +128,9 @@ public class Producto {
      * @param opent2
      * El resultado se muestra acompañado de un texto (Resultado: ...)
      */
-    public static void prod2enteros(int opent1, int opent2) {
+    public static int prod2enteros(int opent1, int opent2) {
         System.out.println("Resultado: " + (opent1 * opent2) + "\n");
+        return (opent1 * opent2);
     }
 
     /**
@@ -139,8 +141,9 @@ public class Producto {
      * @param opreal5
      * El resultado se muestra acompañado de un texto (Resultado: ...)
      */
-    public static void prod3reales(double opreal3, double opreal4, double opreal5) {
+    public static double prod3reales(double opreal3, double opreal4, double opreal5) {
         System.out.println("Resultado: " + (opreal3 * opreal4 * opreal5) + "\n");
+        return (opreal3 * opreal4 * opreal5);
     }
 
     /**
@@ -151,8 +154,9 @@ public class Producto {
      * @param exponente1
      * El resultado se muestra acompañado de un texto (Resultado: ...)
      */
-    public static void potencia(double base1, double exponente1) {
+    public static double potencia(double base1, double exponente1) {
         System.out.println("El resultado es: " + Math.pow(base1, exponente1) + "\n");
+        return (Math.pow(base1, exponente1));
     }
 
     //No se requieren métodos adicionales en las instrucciones de trabajo.
