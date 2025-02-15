@@ -31,7 +31,8 @@ public class Main {
                     break;
                 case "R":
                 case "r":
-                    System.out.println("Aquí tiene que irse al menú de la resta");
+                    System.out.println("Has seleccionado Resta");
+                    Resta.menuResta();
                     break;
                 case "P":
                 case "p":

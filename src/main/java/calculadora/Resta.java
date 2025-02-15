@@ -1,46 +1,151 @@
 package calculadora;
+import java.util.Scanner;
 
+/**
+ * Clase que maneja operaciones de resta con diferentes tipos de números,
+ * incluyendo enteros y reales. Además, mantiene un valor acumulado
+ * que se puede ir restando sucesivamente.
+ *
+ * @author Manuel Alejandro Lopez Ortega
+ * @version 1.1*
+ */
 public class Resta {
-        private float creal;
-        private int c;
-        private float acumulado;  // Para la resta acumulada
 
-        // Constructor para valores enteros
-        public Resta(int a, int b) {
-            this.c = a - b;
-            this.acumulado = this.c; // Inicializa el valor acumulado con el resultado de la resta
+    static Scanner sc = new Scanner(System.in);
+    static float acumulado;
+    static boolean primero = false;
+
+    /**
+     * Muestra un menú y maneja las diferentes opciones de resta elegidas por el usuario.
+     * Permite restar 2 números reales, 2 números enteros, 3 números reales,
+     * o restar al valor acumulado.
+     */
+    public static void menuResta() {
+        int introducido = 0;
+
+        // Bucle infinito hasta que el usuario elija salir
+        while (true) {
+            System.out.println("Elija como deseas restar:");
+            System.out.println("\n1- Restar 2 números reales.");
+            System.out.println("2- Restar 2 números enteros.");
+            System.out.println("3- Restar 3 números reales");
+            System.out.println("4- Restar al acumulado");
+            System.out.println("\nIntroduzca 5 para salir.");
+
+            introducido = sc.nextInt(); // Leer la opción seleccionada
+
+            switch (introducido) {
+                case 1:
+                    System.out.println("Introduzca el valor al que se le va a restar.");
+                    float restareal1 = sc.nextFloat();
+                    System.out.println("Introduzca el valor restado.");
+                    float restareal2 = sc.nextFloat();
+                    System.out.println("Resultado: " + restaReal(restareal1, restareal2));
+                    break;
+
+                case 2:
+                    System.out.println("Introduzca el valor al que se le va a restar.");
+                    int restarent1 = sc.nextInt();
+                    System.out.println("Introduzca el valor restado.");
+                    int restarent2 = sc.nextInt();
+                    System.out.println("Resultado: " + restaEntero(restarent1, restarent2));
+                    break;
+
+                case 3:
+                    System.out.println("Introduzca el valor al que se le va a restar.");
+                    float restatres1 = sc.nextFloat();
+                    System.out.println("Introduzca el primer valor restado.");
+                    float restatres2 = sc.nextFloat();
+                    System.out.println("Introduzca el segundo valor restado.");
+                    float restatres3 = sc.nextFloat();
+                    System.out.println("Resultado: " + restarTres(restatres1, restatres2, restatres3));
+                    break;
+
+                case 4:
+                    if (!primero) {
+                        System.out.println("Introduzca el valor al que se le va a restar.");
+                        float restar = sc.nextFloat();
+                        setAcumulado(restar);
+                        primero = true;
+                        System.out.println("Valor acumulado: " + getAcumulado());
+                    } else {
+                        System.out.println("Introduzca el valor que se va a restar.");
+                        float restar = sc.nextFloat();
+                        System.out.println("Nuevo valor acumulado: " + restaAcumulada(restar));
+                    }
+                    break;
+
+                case 5:
+                    System.out.println("Saliendo...");
+                    return; // Salir del método ejecutarMenu
+
+                default:
+                    System.out.println("Opción incorrecta.");
+            }
         }
+    }
 
-        // Constructor para valores flotantes
-        public Resta(float a, float b) {
-            this.creal = a - b;
-            this.acumulado = this.creal; // Inicializa el valor acumulado con el resultado de la resta
-        }
+    /**
+     * Resta dos números enteros.
+     *
+     * @param a El primer número entero.
+     * @param b El segundo número entero.
+     * @return El resultado de la resta de a y b.
+     */
+    public static int restaEntero(int a, int b) {
+        return a - b;
+    }
 
-        // Métodos para obtener la resta de tipo entero
-        public int getRestaInt() {
-            return c;
-        }
+    /**
+     * Resta dos números reales (decimales).
+     *
+     * @param a El primer número real.
+     * @param b El segundo número real.
+     * @return El resultado de la resta de a y b.
+     */
+    public static float restaReal(float a, float b) {
+        return a - b;
+    }
 
-        // Métodos para obtener la resta de tipo flotante
-        public float getRestaFloat() {
-            return creal;
-        }
+    /**
+     * Resta tres números reales (decimales).
+     *
+     * @param a El primer número real.
+     * @param b El segundo número real.
+     * @param c El tercer número real.
+     * @return El resultado de la resta de a, b y c.
+     */
+    public static float restarTres(float a, float b, float c) {
+        return a - b - c;
+    }
 
-        // Método para la resta de tres números reales
-        public float restaDeTres(float a, float b, float c) {
-            return a - b - c;
-        }
+    /**
+     * Realiza una resta acumulada, es decir, resta el valor proporcionado al
+     * valor acumulado actual.
+     *
+     * @param valor El valor a restar al acumulado.
+     * @return El nuevo valor acumulado después de la resta.
+     */
+    public static float restaAcumulada(float valor) {
+        acumulado -= valor; // Resta el valor al acumulado
+        return acumulado; // Retorna el valor acumulado
+    }
 
-        // Método para la resta acumulada (resta sucesiva)
-        public float restaAcumulada(float valor) {
-            this.acumulado -= valor; // Resta el valor al acumulado
-            return this.acumulado; // Retorna el valor acumulado
-        }
+    /**
+     * Obtiene el valor acumulado actual.
+     *
+     * @return El valor acumulado.
+     */
+    public static float getAcumulado() {
+        return acumulado;
+    }
 
-        // Método para obtener el valor acumulado
-        public float getAcumulado() {
-            return acumulado;
-        }
-
+    /**
+     * Establece el valor acumulado.
+     *
+     * @param acumulado El valor acumulado a establecer.
+     */
+    public static void setAcumulado(float acumulado) {
+        Resta.acumulado = acumulado;
+    }
 }
