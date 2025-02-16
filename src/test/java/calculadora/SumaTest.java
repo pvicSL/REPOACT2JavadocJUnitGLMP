@@ -17,22 +17,22 @@ class SumaTest {
     //Tests sumar dos numeros reales sumaDosNumerosReales().
     @Test
     void sumaDosNumerosRealesPositivos() {
-        assertEquals(7.2, Suma.sumaDosNumeroReales(3.2, 4));
+        assertEquals(7.2, Suma.sumaDosNumerosReales(3.2, 4));
     }
 
     @Test
     void sumaDosNumerosRealesNegativos() {
-        assertEquals(-1, Suma.sumaDosNumeroReales(3, -4));
+        assertEquals(-1, Suma.sumaDosNumerosReales(3, -4));
     }
 
     @Test
     void sumaDosNumeroReales() {
-        assertEquals(7, Suma.sumaDosNumeroReales(3, 4));
+        assertEquals(7, Suma.sumaDosNumerosReales(3, 4));
     }
 
     @Test
     void sumaDosNumeroRealesString() {
-        assertEquals(NumberFormatException.class, Suma.sumaDosNumeroReales("hola", "4"));
+        assertEquals(NumberFormatException.class, Suma.sumaDosNumerosReales("hola", "4"));
     }
 
 
@@ -44,12 +44,12 @@ class SumaTest {
 
     @Test
     void sumaDosNumerosEnterosNegativos() {
-        assertEquals(-1, Suma.sumaDosNumeroEnteros(3, -4));
+        assertEquals(-1, Suma.sumaDosNumerosEnteros(3, -4));
     }
 
     @Test
     void sumaDosNumeroEnteros() {
-        assertEquals(NumberFormatException.class, Suma.sumaDosNumeroEnteros("hola", "4"));
+        assertEquals(NumberFormatException.class, Suma.sumaDosNumerosEnteros("hola", "4"));
     }
 
     //Tests sumar tres numeros reales sumaTresNumerosReales().
