@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author Manuel Alejandro
  * @version 1
  */
+
 class SumaTest {
 
 
@@ -93,3 +94,4 @@ class SumaTest {
         assertEquals(NumberFormatException.class, Suma.sumaValorAcumulado("hola"));
     }
 }
+

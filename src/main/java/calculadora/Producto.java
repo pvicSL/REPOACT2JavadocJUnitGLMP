@@ -1,102 +1,128 @@
 package calculadora;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Producto {
 
     /**
-     * Esta clase ofrece un menú con 4 operaciones de multiplicación básicas,
-     * y una quinta opción para salir del menú.
+     * Esta clase ofrece un menú con 4 operaciones de multiplicación básicas.
      * <p>
      * Opción 1 - cálculo del producto de dos números reales.
      * Opción 2 - cálculo del producto de dos números enteros.
      * Opción 3 - cálculo del producto de tres números reales.
      * Opción 4 - cálculo de la potencia con una base y un exponente.
-     * Opción 5 - salida del menú.
-     *
+     * Opción 5 - regresar al menú principal de la calculadora.
+     *  <p>
      * @author Patricia Victoria Sanz Lopez
-     * @version 0.6
+     * @version 0.9
+     *  <p>
      * id gitHub: pvicSL
+     * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
      */
 
-    //Creación de objeto de clase Scanner para el input del usuario.
+    //Creación de objeto de clase Scanner para recibir el input del usuario.
     static Scanner sc = new Scanner(System.in);
 
-
-    public static void main(String[] args) {
-
-        //Declaración de los datos que empleará la clase
-        double opreal1, opreal2, opreal3, opreal4, opreal5;
-        int opent1, opent2;
-        double base1, exponente1;
-
-        int opcion = 0;
-
-        //Ejecuta el menú hasta que el usuario elija la opción de salida (5)
-        do {
-            opcion = multiMenu();
-        } while (opcion != 5);
-
-        System.out.println("Fin de la operacion.");
-        sc.close();
-    }
-
+    //Función de menú de la clase Producto, para mostrar opciones al usuario.
     /**
-     * Presenta un menú de opciones al usuario, con cuatro posibles
-     * operaciones de multiplicación con distintos parámetros,
-     * y una quinta opción para salir del menú.
-     *
+     * Presenta un menú de 5 opciones al usuario, con cuatro posibles
+     * operaciones de multiplicación con distintos parámetros.
+     * <p>
+     * El usuario debe introducir un número del 1 al 4 para operar,
+     * o 5 si desea regresar al menú inicial de la calculadora.
+     * <p>
      * @return devuelve la funcionalidad de la opción seleccionada.
      */
     public static int multiMenu() {
 
         System.out.println("Elige lo que deseas hacer:");
-        System.out.println("\n1- Producto de 2 números reales.");
-        System.out.println("2- Producto de 2 números enteros.");
-        System.out.println("3- Producto de 3 números reales");
+        System.out.println("1- Producto de 2 reales (decimales).");
+        System.out.println("2- Producto de 2 enteros.");
+        System.out.println("3- Producto de 3 reales (decimales)");
         System.out.println("4- Potencia.");
-        System.out.println("\nTeclea una opción, 5 para salir.");
+        System.out.println("5- Volver al menú inicial.");
 
         int opcion = sc.nextInt();
 
         switch (opcion) {
             case 1:
-                System.out.println("Producto de dos números reales");
-                System.out.println("Introduce el primer operando");
+                try {
+                System.out.println("Producto de dos números reales:");
+                System.out.println("Introduce el primer operando.");
                 double opreal1 = sc.nextDouble();
-                System.out.println("Introduce el segundo operando");
+                System.out.println("Introduce el segundo operando.");
                 double opreal2 = sc.nextDouble();
-                prod2reales(opreal1, opreal2);
+                prod2reales(opreal1, opreal2);}
+                catch (InputMismatchException e){
+                    System.out.println("Dato incorrecto: teclea reales.");
+                    System.out.println("Reiniciando...");
+                    //La línea siguiente limpia el flujo de entrada.
+                    sc.nextLine();
+                    Producto.multiMenu();
+                }
                 break;
             case 2:
-                System.out.println("Producto de dos números enteros");
-                System.out.println("Introduce el primer operando");
+                try {
+                System.out.println("Producto de dos números enteros:");
+                System.out.println("Introduce el primer operando.");
                 int opent1 = sc.nextInt();
-                System.out.println("Introduce el segundo operando");
+                System.out.println("Introduce el segundo operando.");
                 int opent2 = sc.nextInt();
-                prod2enteros(opent1, opent2);
+                prod2enteros(opent1, opent2); }
+                catch (InputMismatchException e){
+                    System.out.println("Dato incorrecto: teclea enteros.");
+                    System.out.println("Reiniciando...");
+                    //La línea siguiente limpia el flujo de entrada.
+                    sc.nextLine();
+                    Producto.multiMenu();
+                    }
                 break;
             case 3:
-                System.out.println("Producto de tres números reales");
+                try {
+                System.out.println("Producto de tres números reales:");
                 System.out.println("Introduce el primer operando.");
                 double opreal3 = sc.nextDouble();
                 System.out.println("Introduce el segundo operando.");
                 double opreal4 = sc.nextDouble();
                 System.out.println("Introduce el tercer operando.");
                 double opreal5 = sc.nextDouble();
-                prod3reales(opreal3, opreal4, opreal5);
+                prod3reales(opreal3, opreal4, opreal5);}
+                catch (InputMismatchException e){
+                    System.out.println("Dato incorrecto: teclea reales.");
+                    System.out.println("Reiniciando...");
+                    //La línea siguiente limpia el flujo de entrada.
+                    sc.nextLine();
+                    Producto.multiMenu();
+                }
                 break;
             case 4:
-                System.out.println("Potencia");
+                try {
+                System.out.println("Potencia:");
                 System.out.println("Introduce la base.");
                 double base1 = sc.nextDouble();
                 System.out.println("Introduce el exponente.");
                 double exponente1 = sc.nextDouble();
-                potencia(base1, exponente1);
+                potencia(base1, exponente1);}
+                catch (InputMismatchException e){
+                    System.out.println("Dato incorrecto: teclea números.");
+                    System.out.println("Reiniciando...");
+                    //La línea siguiente limpia el flujo de entrada.
+                    sc.nextLine();
+                    Producto.multiMenu();
+                }
+                break;
+            case 5:
+                System.out.println("\nRegresando...\n");
                 break;
 
         } while (opcion < 1 || opcion > 5) {
-            System.out.println("Opción incorrecta.");
+            System.out.println("\nOpción incorrecta. Introduce una de las siguientes:");
+            System.out.println("1- Producto de 2 reales (decimales).");
+            System.out.println("2- Producto de 2 enteros.");
+            System.out.println("3- Producto de 3 reales (decimales)");
+            System.out.println("4- Potencia.");
+            System.out.println("5- Volver al menú inicial.");
             opcion = sc.nextInt();
             if (!sc.hasNextInt()) {
                 System.out.println("Has tecleado una letra.");

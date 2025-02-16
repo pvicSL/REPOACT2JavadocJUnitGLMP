@@ -8,10 +8,15 @@ import java.util.Scanner;
  * con las siguientes opciones: suma, resta, producto y cociente.
  *
  * <p>Ejemplo de uso:</p>
- *
+ * El usuario elige una opción del menú, debe ser redirigido a otro menú
+ * con opciones para realizar operaciones.
+ * Cuando selecciona una de ellas, debe introducir los parámetros que se le
+ * indiquen, se realizará la operación, mostrando el resultado, y el programa
+ * devolverá al usuario al menú para que vuelva a elegir una opción.
  *
  * @author
- * @version 0
+ * @version 0.5
+ * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
  */
 public class Main {
 
@@ -27,16 +32,16 @@ public class Main {
             switch (option) {
                 case "S":
                 case "s":
-                    System.out.println("Aquí tiene que irse al menú de la suma");
+                    System.out.println("Has seleccionado Suma:");
                     break;
                 case "R":
                 case "r":
-                    System.out.println("Has seleccionado Resta");
+                    System.out.println("Has seleccionado Resta:");
                     Resta.menuResta();
                     break;
                 case "P":
                 case "p":
-                    System.out.println("Has seleccionado Producto");
+                    System.out.println("Has seleccionado Producto:");
                     Producto.multiMenu();
                     break;
                 case "C":
@@ -56,17 +61,26 @@ public class Main {
     public static String printMenu() {
         String option = " ";
         System.out.println("CALCULADORA");
-        System.out.println("Seleccione el tipo de operación que desee:");
+        System.out.println("Selecciona el tipo de operación:");
         System.out.println("S - Suma.");
         System.out.println("R - Resta");
         System.out.println("P - Producto");
         System.out.println("C - Cociente");
 
-        System.out.println("Teclee la opción deseada, F para finalizar.");
+        System.out.println("Teclea la opción deseada, F para finalizar.");
         option = String.valueOf(sc.next());
 
         while (!("S".equalsIgnoreCase(option) || "R".equalsIgnoreCase(option) || "P".equalsIgnoreCase(option) || "C".equalsIgnoreCase(option) || "F".equalsIgnoreCase(option))) {
             System.out.println("Opción errónea.");
+
+            System.out.println("Selecciona el tipo de operación:");
+            System.out.println("S - Suma.");
+            System.out.println("R - Resta");
+            System.out.println("P - Producto");
+            System.out.println("C - Cociente");
+
+            System.out.println("Teclea la opción deseada, F para finalizar.");
+
             option = String.valueOf(sc.next());
         }
         return option;
