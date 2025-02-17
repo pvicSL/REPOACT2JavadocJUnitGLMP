@@ -43,6 +43,14 @@ public class Producto {
         System.out.println("4- Potencia.");
         System.out.println("5- Volver al menú inicial.");
 
+        while (!sc.hasNextInt()) {
+            System.out.println("Has tecleado una letra.");
+            System.out.println("Introduce un número.");
+            sc.nextLine();
+            Producto.multiMenu();
+        }
+
+
         int opcion = sc.nextInt();
 
         switch (opcion) {
@@ -59,8 +67,8 @@ public class Producto {
                     System.out.println("Reiniciando...");
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
-                    Producto.multiMenu();
                 }
+                Producto.multiMenu();
                 break;
             case 2:
                 try {
@@ -75,8 +83,8 @@ public class Producto {
                     System.out.println("Reiniciando...");
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
-                    Producto.multiMenu();
                     }
+                Producto.multiMenu();
                 break;
             case 3:
                 try {
@@ -93,8 +101,8 @@ public class Producto {
                     System.out.println("Reiniciando...");
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
-                    Producto.multiMenu();
                 }
+                Producto.multiMenu();
                 break;
             case 4:
                 try {
@@ -109,8 +117,8 @@ public class Producto {
                     System.out.println("Reiniciando...");
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
-                    Producto.multiMenu();
                 }
+                Producto.multiMenu();
                 break;
             case 5:
                 System.out.println("\nRegresando...\n");
@@ -118,16 +126,12 @@ public class Producto {
 
         } while (opcion < 1 || opcion > 5) {
             System.out.println("\nOpción incorrecta. Introduce una de las siguientes:");
-            System.out.println("1- Producto de 2 reales (decimales).");
-            System.out.println("2- Producto de 2 enteros.");
-            System.out.println("3- Producto de 3 reales (decimales)");
-            System.out.println("4- Potencia.");
-            System.out.println("5- Volver al menú inicial.");
+            System.out.println("1. Producto de 2 reales (decimales).");
+            System.out.println("2. Producto de 2 enteros.");
+            System.out.println("3. Producto de 3 reales (decimales)");
+            System.out.println("4. Potencia.");
+            System.out.println("5. Volver al menú inicial.");
             opcion = sc.nextInt();
-            if (!sc.hasNextInt()) {
-                System.out.println("Has tecleado una letra.");
-                opcion = sc.nextInt();
-            }
         }
         return opcion;
 

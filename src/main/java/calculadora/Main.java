@@ -33,6 +33,7 @@ public class Main {
                 case "S":
                 case "s":
                     System.out.println("Has seleccionado Suma:");
+                    Suma.menuSuma();
                     break;
                 case "R":
                 case "r":
