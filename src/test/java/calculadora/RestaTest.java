@@ -2,6 +2,9 @@ package calculadora;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 import static calculadora.Resta.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,8 +31,7 @@ class RestaTest {
     }
 
     @Test
-    void restaEnteroCero() {
-        assertEquals(-6, restaEntero(0, 6));
+    void restaEnteroCero() {assertEquals(-6, restaEntero(0, 6));
     }
 
     @Test

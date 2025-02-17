@@ -139,8 +139,9 @@ public class Resta {
      * @param b El segundo número entero.
      * @return El resultado de la resta de a y b.
      */
-    public static int restaEntero(int a, int b) {
-        return a - b;
+    public static int restaEntero(int a, int b) throws InputMismatchException {
+
+            return a-b;
     }
 
     /**
@@ -150,8 +151,9 @@ public class Resta {
      * @param b El segundo número real.
      * @return El resultado de la resta de a y b.
      */
-    public static float restaReal(float a, float b) {
-        return a - b;
+    public static float restaReal(float a, float b) throws InputMismatchException {
+
+                return a - b;
     }
 
     /**
@@ -162,8 +164,9 @@ public class Resta {
      * @param c El tercer número real.
      * @return El resultado de la resta de a, b y c.
      */
-    public static float restarTres(float a, float b, float c) {
-        return a - b - c;
+    public static float restarTres(float a, float b, float c) throws InputMismatchException {
+
+                return a - b - c;
     }
 
     /**
@@ -173,9 +176,10 @@ public class Resta {
      * @param valor El valor a restar al acumulado.
      * @return El nuevo valor acumulado después de la resta.
      */
-    public static float restaAcumulada(float valor) {
-        acumulado -= valor; // Resta el valor al acumulado
-        return acumulado; // Retorna el valor acumulado
+    public static float restaAcumulada(float valor) throws InputMismatchException {
+
+                acumulado -= valor; // Resta el valor al acumulado
+                return acumulado; // Retorna el valor acumulado
     }
 
     /**
