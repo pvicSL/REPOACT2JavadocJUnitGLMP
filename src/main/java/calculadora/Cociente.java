@@ -12,6 +12,7 @@ public class Cociente {
      * @author Laura Vinseiro
      * @version 2.0*
      * id gitHub: Lauu92
+     * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
      */
 
     static Scanner sc = new Scanner(System.in);
@@ -24,6 +25,13 @@ public class Cociente {
         System.out.println("2. División de dos números enteros. ");
         System.out.println("3. Inverso de un número real. ");
         System.out.println("4. Raíz cuadrada de un número.");
+
+
+        while (!sc.hasNextInt()) {
+            System.out.println("Has tecleado una letra.");
+            System.out.println("Introduce un número.");
+            sc.nextLine();
+        }
 
         int opcion = sc.nextInt();
 
@@ -61,6 +69,7 @@ public class Cociente {
         } while (opcion <1 || opcion >4) {
             System.out.println("Opción no válida. Introduce otro número.");
             opcion = sc.nextInt();
+
         }
     }
 
