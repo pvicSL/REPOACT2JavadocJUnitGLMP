@@ -37,12 +37,21 @@ public class Cociente {
 
         switch (opcion) {
             case 1:
-                System.out.println("Introduce el dividendo: ");
-                double dividendoReal = sc.nextDouble();
-                System.out.println("Introduce el divisor: ");
-                double divisorReal = sc.nextDouble();
-                divisionReal(dividendoReal, divisorReal);
+                try {
+                    System.out.println("Introduce el dividendo: ");
+                    double dividendoReal = sc.nextDouble();
+                    System.out.println("Introduce el divisor: ");
+                    double divisorReal = sc.nextDouble();
+                    divisionReal(dividendoReal, divisorReal);
+
+                }
+                catch (InputMismatchException e) {
+                    System.out.println("Dato erróneo. No es un número real.");
+                    //La línea siguiente limpia el flujo de entrada.
+                    sc.nextLine();
+                }
                 break;
+
             case 2:
                 try {
                     System.out.println("Introduce el dividendo: ");
@@ -51,20 +60,34 @@ public class Cociente {
                     int divisorEntero = sc.nextInt();
                     divisionEntero(dividendoEntero, divisorEntero); }
                 catch (InputMismatchException e) {
-                    System.out.println("Dato erróneo. No es un número real.");
+                    System.out.println("Dato erróneo. No es un número entero.");
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
                 }
                 break;
             case 3:
-                System.out.println("Introduce el número a calcular: ");
-                double numeroInverso = sc.nextDouble();
-                inversoReal(numeroInverso);
+                try {
+                    System.out.println("Introduce el número a calcular: ");
+                    double numeroInverso = sc.nextDouble();
+                    inversoReal(numeroInverso);
+                }
+                catch (InputMismatchException e) {
+                    System.out.println("Dato erróneo. No es un número real.");
+                    //La línea siguiente limpia el flujo de entrada.
+                    sc.nextLine();
+                }
                 break;
             case 4:
-                System.out.println("Introduce el número a calcular: ");
-                double raiz = sc.nextDouble();
-                raizCuadrada(raiz);
+                try {
+                    System.out.println("Introduce el número a calcular: ");
+                    double raiz = sc.nextDouble();
+                    raizCuadrada(raiz);
+                }
+                catch (InputMismatchException e) {
+                    System.out.println("Dato erróneo. No es un número real.");
+                    //La línea siguiente limpia el flujo de entrada.
+                    sc.nextLine();
+                }
                 break;
         } while (opcion <1 || opcion >4) {
             System.out.println("Opción no válida. Introduce otro número.");
@@ -83,7 +106,7 @@ public class Cociente {
      * @return dividendoReal/divisorReal.
      */
 
-    public static double divisionReal(double dividendoReal, double divisorReal) {
+    public static double divisionReal(double dividendoReal, double divisorReal) throws InputMismatchException {
         while (divisorReal == 0) {
             System.out.println("Introduce otro número. El divisor no puede ser cero.");
             divisorReal = sc.nextInt();
@@ -102,7 +125,7 @@ public class Cociente {
      * @return dividendoEntero / divisorEntero
      */
 
-    public static int divisionEntero(int dividendoEntero, int divisorEntero) throws InputMismatchException{
+    public static int divisionEntero(int dividendoEntero, int divisorEntero) throws InputMismatchException {
         while (divisorEntero == 0) {
             System.out.println("Introduce otro número. El divisor no puede ser cero.");
             divisorEntero = sc.nextInt();
@@ -116,7 +139,7 @@ public class Cociente {
      * @param numeroInverso número real introducido por el usuario.
      * @return 1/numeroInverso.
      */
-    public static double inversoReal(double numeroInverso) {
+    public static double inversoReal(double numeroInverso) throws InputMismatchException {
         System.out.println("Resultado: " + 1/numeroInverso);
         return 1/numeroInverso;
     }
@@ -128,7 +151,7 @@ public class Cociente {
      * @param raiz número real introducido por el usuario.
      * @return Math.sqrt(raiz).
      */
-    public static double raizCuadrada(double raiz) {
+    public static double raizCuadrada(double raiz) throws InputMismatchException {
         while (raiz < 0) {
             System.out.println("Introduce otro número. No se puede calcular la raíz de un número negativo.");
             raiz = sc.nextDouble();
