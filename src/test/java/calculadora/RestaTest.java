@@ -3,6 +3,7 @@ package calculadora;
 import org.junit.jupiter.api.Test;
 
 import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import static calculadora.Resta.*;
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * <p>
  * @author Patricia Victoria Sanz Lopez
  * id gitHub: pvicSL
- * @version 0.9
+ * @version 1.0
  */
 
 class RestaTest {
@@ -36,9 +37,11 @@ class RestaTest {
 
     @Test
     void restaEnteroEntradaIncorrecta() {
-        //TODO actualizar el método para evitar la excepción por input mismatch
+        Scanner sc = new Scanner("abc");
+        assertThrows(NoSuchElementException.class, () -> {
+            Resta.restaEntero(3, sc.nextInt());
+        });
     }
-
 
     //Testing para restas de dos números con decimales - restaReal()
     @Test
@@ -63,7 +66,10 @@ class RestaTest {
 
     @Test
     void restaRealEntradaIncorrecta() {
-        //TODO actualizar el método para evitar la excepción por input mismatch
+        Scanner sc = new Scanner("abc");
+        assertThrows(NoSuchElementException.class, () -> {
+            Resta.restaReal(12.0f, sc.nextInt());
+        });
     }
 
 
@@ -72,7 +78,6 @@ class RestaTest {
     void restarTresFuncionamientoBasico() {
         assertEquals(-2.5000002f, restarTres(5.5f, 3.2f, 4.8f));
     }
-
 
     @Test
     void restarTresNegativos() {
@@ -86,7 +91,10 @@ class RestaTest {
 
     @Test
     void restarTresEntradaIncorrecta() {
-        //TODO actualizar el método para evitar la excepción por input mismatch
+        Scanner sc = new Scanner("abc");
+        assertThrows(NoSuchElementException.class, () -> {
+            Resta.restarTres(5.0f,12.0f, sc.nextInt());
+        });
     }
 
     //Testing para restas con valor acumulado - restaAcumulada()
@@ -113,8 +121,10 @@ class RestaTest {
 
     @Test
     void restaAcumuladaEntradaIncorrecta() {
-        //TODO actualizar el método para evitar la excepción por input mismatch de letras
+        Scanner sc = new Scanner("abc");
+        assertThrows(NoSuchElementException.class, () -> {
+            Resta.restaAcumulada(sc.nextInt());
+        });
     }
-
 
 }

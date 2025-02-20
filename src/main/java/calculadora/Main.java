@@ -14,8 +14,12 @@ import java.util.Scanner;
  * indiquen, se realizará la operación, mostrando el resultado, y el programa
  * devolverá al usuario al menú para que vuelva a elegir una opción.
  *
- * @author
- * @version 0.5
+ * @author Gregory López Gómez
+ * @author Manuel Alejandro Lopez Ortega
+ * @author Patricia Victoria Sanz López
+ * @author Laura Vinseiro
+ *
+ * @version 0.6
  * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
  */
 public class Main {
