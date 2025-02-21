@@ -6,9 +6,17 @@ import java.util.InputMismatchException;
  * Clase que maneja operaciones de resta con diferentes tipos de números,
  * incluyendo enteros y reales. Además, mantiene un valor acumulado
  * que se puede ir restando sucesivamente.
- *
+ * <p>
+ * Opción 1 - cálculo de la resta de dos números reales.
+ * Opción 2 - cálculo de la resta de dos números enteros.
+ * Opción 3 - cálculo de la resta de tres números reales.
+ * Opción 4 - cálculo de la resta acumulada.
+ * Opción 5 - regresar al menú principal de la calculadora.
+ * <p>
  * @author Manuel Alejandro Lopez Ortega
  * @version 1.1*
+ * <p>
+ * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
  */
 public class Resta {
 
@@ -17,21 +25,25 @@ public class Resta {
     static boolean primero = false;
     static boolean flag=true;
     /**
-     * Muestra un menú y maneja las diferentes opciones de resta elegidas por el usuario.
-     * Permite restar 2 números reales, 2 números enteros, 3 números reales,
-     * o restar al valor acumulado.
+     * Presenta un menú de 5 opciones al usuario, con cuatro posibles
+     * operaciones de resta con distintos parámetros.
+     * <p>
+     * El usuario debe introducir un número del 1 al 4 para operar,
+     * o 5 si desea regresar al menú inicial de la calculadora.
+     * <p>
+     * @return devuelve la funcionalidad de la opción seleccionada.
      */
     public static void menuResta() {
         int introducido = 0;
 
         // Bucle infinito hasta que el usuario elija salir
         while (true) {
-            System.out.println("Elija como deseas restar:");
-            System.out.println("\n1- Restar 2 numeros reales.");
-            System.out.println("2- Restar 2 numeros enteros.");
-            System.out.println("3- Restar 3 numeros reales");
-            System.out.println("4- Restar al acumulado");
-            System.out.println("\nIntroduzca 5 para salir.");
+            System.out.println("Elige lo que deseas hacer:");
+            System.out.println("\n1- Resta de 2 numeros reales.");
+            System.out.println("2- Resta de 2 numeros enteros.");
+            System.out.println("3- Resta de 3 numeros reales");
+            System.out.println("4- Resta al acumulado");
+            System.out.println("5- Volver al menu inicial.");
 
             try {
                 introducido = sc.nextInt(); // Leer la opción seleccionada
@@ -123,11 +135,11 @@ public class Resta {
                     break;
 
                 case 5:
-                    System.out.println("Saliendo...");
+                    System.out.println("\nRegresando...\n");
                     return;
 
                 default:
-                    System.out.println("Opción incorrecta.");
+                    System.out.println("Opcion incorrecta.");
             }
         }
     }

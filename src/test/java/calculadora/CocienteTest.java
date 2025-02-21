@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,8 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Clase de test mediante JUnit 5 destinada a probar los métodos de la clase Cociente.TODO
  * @author Gregory Lopez
- * id id gitHub: Lauu92
  * @version 3
+ * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
  */
 
 class CocienteTest {

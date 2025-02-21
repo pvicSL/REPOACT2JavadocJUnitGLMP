@@ -37,7 +37,7 @@ public class Producto {
     public static int multiMenu() {
 
         System.out.println("Elige lo que deseas hacer:");
-        System.out.println("1- Producto de 2 numeros reales.");
+        System.out.println("\n1- Producto de 2 numeros reales.");
         System.out.println("2- Producto de 2 numeros enteros.");
         System.out.println("3- Producto de 3 numeros reales.");
         System.out.println("4- Potencia.");
@@ -144,7 +144,7 @@ public class Producto {
      * (con o sin decimales) que haya introducido el usuario.
      * @param opreal1 debe ser un número real (con decimales)
      * @param opreal2 debe ser un número real (con decimales)
-     * El resultado se muestra acompañado de un texto (Resultado: ...)
+     * @return El resultado se muestra acompañado de un texto (Resultado: ...)
      */
     public static double prod2reales(double opreal1, double opreal2) {
         System.out.println("El resultado es: " + (opreal1 * opreal2) + "\n");
@@ -156,7 +156,7 @@ public class Producto {
      * que haya introducido el usuario.
      * @param opent1
      * @param opent2
-     * El resultado se muestra acompañado de un texto (Resultado: ...)
+     * @return El resultado se muestra acompañado de un texto (Resultado: ...)
      */
     public static int prod2enteros(int opent1, int opent2) {
         System.out.println("El resultado es: " + (opent1 * opent2) + "\n");
@@ -169,7 +169,7 @@ public class Producto {
      * @param opreal3
      * @param opreal4
      * @param opreal5
-     * El resultado se muestra acompañado de un texto (Resultado: ...)
+     * @return El resultado se muestra acompañado de un texto (Resultado: ...)
      */
     public static double prod3reales(double opreal3, double opreal4, double opreal5) {
         System.out.println("El resultado es: " + (opreal3 * opreal4 * opreal5) + "\n");
@@ -182,7 +182,7 @@ public class Producto {
      * Trabaja con reales para ampliar su versatilidad.
      * @param base1
      * @param exponente1
-     * El resultado se muestra acompañado de un texto (Resultado: ...)
+     * @return El resultado se muestra acompañado de un texto (Resultado: ...)
      */
     public static double potencia(double base1, double exponente1) {
         System.out.println("El resultado es: " + Math.pow(base1, exponente1) + "\n");
