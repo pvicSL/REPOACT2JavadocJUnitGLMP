@@ -7,9 +7,16 @@ import java.util.InputMismatchException;
  * Clase que maneja operaciones de suma con diferentes tipos de números,
  * incluyendo enteros y reales. Además, mantiene un valor acumulado
  * que se puede ir sumando sucesivamente.
- *
+ * <p>
+ *Opción 1 - cálculo de la suma de dos números reales.
+ * Opción 2 - cálculo de la suma de dos números enteros.
+ * Opción 3 - cálculo de la suma de tres números reales.
+ * Opción 4 - cálculo de la suma acumulada.
+ * Opción 5 - regresar al menú principal de la calculadora.
+ * <p>
  * @author Gregory López Gómez
  * @version 1.2*
+ * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
  */
 public class Suma {
 
@@ -18,20 +25,24 @@ public class Suma {
     static boolean primero = false;
     static boolean flag=true;
     /**
-     * Muestra un menú y maneja las diferentes opciones de suma elegidas por el usuario.
-     * Permite sumarr 2 números reales, 2 números enteros, 3 números reales,
-     * o sumar al valor acumulado.
+     * Presenta un menú de 5 opciones al usuario, con cuatro posibles
+     * operaciones de suma con distintos parámetros.
+     * <p>
+     * El usuario debe introducir un número del 1 al 4 para operar,
+     * o 5 si desea regresar al menú inicial de la calculadora.
+     * <p>
+     * @return devuelve la funcionalidad de la opción seleccionada.
      */
     public static void menuSuma() {
         int introducido = 0;
 
         // Bucle infinito hasta que el usuario elija salir
         while (true) {
-            System.out.println("Elige como deseas sumar:");
-            System.out.println("\n1+ Sumar 2 numeros reales.");
-            System.out.println("2+ Sumar 2 numeros enteros.");
-            System.out.println("3+ Sumar 3 numeros reales");
-            System.out.println("4+ Sumar al acumulado");
+            System.out.println("Elige lo que deseas hacer:");
+            System.out.println("\n1- Suma de 2 numeros reales.");
+            System.out.println("2- Suma de 2 numeros enteros.");
+            System.out.println("3- Suma de 3 numeros reales");
+            System.out.println("4- Suma al acumulado");
             System.out.println("\nIntroduce 5 para salir.");
 
             try {
@@ -125,11 +136,11 @@ public class Suma {
                     break;
 
                 case 5:
-                    System.out.println("Saliendo...");
+                    System.out.println("\nRegresando...\n");
                     return;
 
                 default:
-                    System.out.println("Opción incorrecta.");
+                    System.out.println("Opcion incorrecta.");
             }
         }
     }

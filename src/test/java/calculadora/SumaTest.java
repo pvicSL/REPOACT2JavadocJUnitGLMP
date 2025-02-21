@@ -15,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Clase de test mediante JUnit 5 destinada a probar los métodos de la clase Suma.
  * @author Manuel Alejandro
  * @version 1.1
+ * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
 */
 
 class SumaTest {
