@@ -43,7 +43,7 @@ public class Cociente {
         System.out.println("\n1- Division de dos numeros reales.");
         System.out.println("2- Division de dos numeros enteros. ");
         System.out.println("3- Inverso de un numero real. ");
-        System.out.println("4- Raíz cuadrada de un numero.");
+        System.out.println("4- Raiz cuadrada de un numero.");
         System.out.println("5- Volver al menu inicial.");
 
 
@@ -70,6 +70,7 @@ public class Cociente {
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
                 }
+                Cociente.menuCociente();
                 break;
 
             case 2:
@@ -84,6 +85,7 @@ public class Cociente {
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
                 }
+                Cociente.menuCociente();
                 break;
             case 3:
                 try {
@@ -96,6 +98,7 @@ public class Cociente {
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
                 }
+                Cociente.menuCociente();
                 break;
             case 4:
                 try {
@@ -108,6 +111,7 @@ public class Cociente {
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
                 }
+                Cociente.menuCociente();
                 break;
             case 5:
                 System.out.println("\nRegresando...\n");
