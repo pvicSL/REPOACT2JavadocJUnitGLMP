@@ -66,7 +66,7 @@ public class Main {
     public static String printMenu() {
         String option = " ";
         System.out.println("CALCULADORA");
-        System.out.println("Selecciona el tipo de operación:");
+        System.out.println("Selecciona el tipo de operacion:");
         System.out.println("S - Suma.");
         System.out.println("R - Resta");
         System.out.println("P - Producto");

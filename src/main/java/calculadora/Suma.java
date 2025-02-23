@@ -64,7 +64,7 @@ public class Suma {
                             System.out.println("Resultado: " + sumaReal(sumarreal1, sumarreal2));
                             break;  // Salir del bucle una vez que la entrada es válida
                         } catch (InputMismatchException e) {
-                            System.out.println("Error: Debes ingresar numeros reales.");
+                            System.out.println("Error: debes ingresar numeros reales.");
                             sc.nextLine(); // Limpiar el buffer de entrada
                         }
                     }
@@ -73,9 +73,9 @@ public class Suma {
                 case 2:
                     while (true) {
                         try {
-                            System.out.println("Introduzca el valor al que se le va a sumar.");
+                            System.out.println("Introduce el valor al que se le va a sumar.");
                             int sumaent1 = sc.nextInt();
-                            System.out.println("Introduzca el valor sumado.");
+                            System.out.println("Introduce el valor sumado.");
                             int sumaent2 = sc.nextInt();
                             System.out.println("Resultado: " + sumaEntero(sumaent1, sumaent2));
                             break;  // Salir del bucle una vez que la entrada es válida

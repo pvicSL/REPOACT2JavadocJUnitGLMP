@@ -48,7 +48,7 @@ public class Resta {
             try {
                 introducido = sc.nextInt(); // Leer la opción seleccionada
             } catch (InputMismatchException e) {
-                System.out.println("Error: Debes ingresar un numero entero.");
+                System.out.println("Error: debes ingresar un numero entero.");
                 sc.nextLine();  // Limpiar el buffer de entrada
                 continue;  // Volver a pedir el menú
             }
@@ -57,14 +57,14 @@ public class Resta {
                 case 1:
                     while (true) {
                         try {
-                            System.out.println("Introduzca el valor al que se le va a restar.");
+                            System.out.println("Introduce el valor al que se le va a restar.");
                             float restareal1 = sc.nextFloat();
-                            System.out.println("Introduzca el valor restado.");
+                            System.out.println("Introduce el valor restado.");
                             float restareal2 = sc.nextFloat();
                             System.out.println("Resultado: " + restaReal(restareal1, restareal2));
                             break;  // Salir del bucle una vez que la entrada es válida
                         } catch (InputMismatchException e) {
-                            System.out.println("Error: Debes ingresar numeros reales.");
+                            System.out.println("Error: debes ingresar numeros reales.");
                             sc.nextLine(); // Limpiar el buffer de entrada
                         }
                     }
@@ -73,14 +73,14 @@ public class Resta {
                 case 2:
                     while (true) {
                         try {
-                            System.out.println("Introduzca el valor al que se le va a restar.");
+                            System.out.println("Introduce el valor al que se le va a restar.");
                             int restarent1 = sc.nextInt();
-                            System.out.println("Introduzca el valor restado.");
+                            System.out.println("Introduce el valor restado.");
                             int restarent2 = sc.nextInt();
                             System.out.println("Resultado: " + restaEntero(restarent1, restarent2));
                             break;  // Salir del bucle una vez que la entrada es válida
                         } catch (InputMismatchException e) {
-                            System.out.println("Error: Debes ingresar numeros enteros.");
+                            System.out.println("Error: debes ingresar numeros enteros.");
                             sc.nextLine();  // Limpiar el buffer de entrada
                         }
                     }
@@ -89,16 +89,16 @@ public class Resta {
                 case 3:
                     while (true) {
                         try {
-                            System.out.println("Introduzca el valor al que se le va a restar.");
+                            System.out.println("Introduce el valor al que se le va a restar.");
                             float restatres1 = sc.nextFloat();
-                            System.out.println("Introduzca el primer valor restado.");
+                            System.out.println("Introduce el primer valor restado.");
                             float restatres2 = sc.nextFloat();
-                            System.out.println("Introduzca el segundo valor restado.");
+                            System.out.println("Introduce el segundo valor restado.");
                             float restatres3 = sc.nextFloat();
                             System.out.println("Resultado: " + restarTres(restatres1, restatres2, restatres3));
                             break;  // Salir del bucle una vez que la entrada es válida
                         } catch (InputMismatchException e) {
-                            System.out.println("Error: Debes ingresar numeros reales.");
+                            System.out.println("Error: debes ingresar numeros reales.");
                             sc.nextLine();  // Limpiar el buffer de entrada
                         }
                     }
@@ -108,26 +108,26 @@ public class Resta {
                     if (!primero) {
                         while (true) {
                             try {
-                                System.out.println("Introduzca el valor al que se le va a restar.");
+                                System.out.println("Introduce el valor al que se le va a restar.");
                                 float restar = sc.nextFloat();
                                 setAcumulado(restar);
                                 primero = true;
                                 System.out.println("Valor acumulado: " + getAcumulado());
                                 break;  // Salir del bucle una vez que la entrada es válida
                             } catch (InputMismatchException e) {
-                                System.out.println("Error: Debes ingresar un numero real.");
+                                System.out.println("Error: debes ingresar un numero real.");
                                 sc.nextLine();  // Limpiar el buffer de entrada
                             }
                         }
                     } else {
                         while (true) {
                             try {
-                                System.out.println("Introduzca el valor que se va a restar.");
+                                System.out.println("Introduce el valor que se va a restar.");
                                 float restar = sc.nextFloat();
                                 System.out.println("Nuevo valor acumulado: " + restaAcumulada(restar));
                                 break;  // Salir del bucle una vez que la entrada es válida
                             } catch (InputMismatchException e) {
-                                System.out.println("Error: Debes ingresar un numero real.");
+                                System.out.println("Error: debes ingresar un numero real.");
                                 sc.nextLine();  // Limpiar el buffer de entrada
                             }
                         }
