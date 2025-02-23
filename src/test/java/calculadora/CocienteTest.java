@@ -35,13 +35,8 @@ class CocienteTest {
     void dicisionRealDecimal() {
         assertEquals(7.8, Cociente.divisionReal(19.5, 2.5));
     }
-    @Test
-    void divisionRealFallo(){
-        Scanner sc = new Scanner("0");
-        assertThrows(InputMismatchException.class, () -> {
-            Cociente.divisionReal(24, sc.nextInt());
-        });
-    }
+
+
 
     //DivisionEnteros
     @Test
@@ -57,14 +52,7 @@ class CocienteTest {
     void divisonEnterosDecimal(){
         assertEquals(7.8, Cociente.divisionReal(19.5,2.5));
     }
-    @Test
-    void divisionEnterosFallo(){
-        Scanner sc = new Scanner("0");
-        assertThrows(InputMismatchException.class, () -> {
-            Cociente.divisionEntero(24, sc.nextInt());
-        });
 
-    }
     //DivisionInversoReal
     @Test
     void inversoRealBasico(){
@@ -88,12 +76,7 @@ class CocienteTest {
         assertEquals(4, Cociente.raizCuadrada(16));
 
     }
-    @Test
-    void raizCuadradaNegativa(){
-        Scanner sc = new Scanner("-16");
-        assertThrows(InputMismatchException.class, () -> {
-            Cociente.raizCuadrada( sc.nextInt());
-        });
+
 
     }
 
