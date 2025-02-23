@@ -3,24 +3,24 @@ package calculadora;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Cociente {
+/**
+ * La clase Cociente representa un menú de funciones relacionadas con
+ * las operaciones de cociente básicas.
+ * <p>
+ * Opción 1 - cálculo de la división de dos números reales.
+ * Opción 2 - cálculo de la división de dos números enteros.
+ * Opción 3 - cálculo del inverso de un número real.
+ * Opción 4 - cálculo de la raíz cuadrada de un número real.
+ * Opción 5 - regresar al menú principal de la calculadora.
+ * <p>
+ * @author Laura Vinseiro Gutiérrez
+ * @version 2.0*
+ * <p>
+ * id gitHub: Lauu92
+ * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
+ */
 
-    /**
-     * La clase Cociente representa un menú de funciones relacionadas con
-     * las operaciones de cociente básicas.
-     * <p>
-     * Opción 1 - cálculo de la división de dos números reales.
-     * Opción 2 - cálculo de la división de dos números enteros.
-     * Opción 3 - cálculo del inverso de un número real.
-     * Opción 4 - cálculo de la raíz cuadrada de un número real.
-     * Opción 5 - regresar al menú principal de la calculadora.
-     * <p>
-     * @author Laura Vinseiro Gutiérrez
-     * @version 2.0*
-     * <p>
-     * id gitHub: Lauu92
-     * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
-     */
+public class Cociente {
 
     //Creación de objeto de clase Scanner para recibir el input del usuario.
     static Scanner sc = new Scanner(System.in);

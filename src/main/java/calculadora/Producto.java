@@ -3,23 +3,24 @@ package calculadora;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Producto {
 
-    /**
-     * Esta clase ofrece un menú con 4 operaciones de multiplicación básicas.
-     * <p>
-     * Opción 1 - cálculo del producto de dos números reales.
-     * Opción 2 - cálculo del producto de dos números enteros.
-     * Opción 3 - cálculo del producto de tres números reales.
-     * Opción 4 - cálculo de la potencia con una base y un exponente.
-     * Opción 5 - regresar al menú principal de la calculadora.
-     *  <p>
-     * @author Patricia Victoria Sanz Lopez
-     * @version 0.9
-     *  <p>
-     * id gitHub: pvicSL
-     * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
-     */
+/**
+ * Esta clase ofrece un menú con 4 operaciones de multiplicación básicas.
+ * <p>
+ * Opción 1 - cálculo del producto de dos números reales.
+ * Opción 2 - cálculo del producto de dos números enteros.
+ * Opción 3 - cálculo del producto de tres números reales.
+ * Opción 4 - cálculo de la potencia con una base y un exponente.
+ * Opción 5 - regresar al menú principal de la calculadora.
+ *  <p>
+ * @author Patricia Victoria Sanz Lopez
+ * @version 0.9
+ *  <p>
+ * id gitHub: pvicSL
+ * URL repositorio Github: https://github.com/pvicSL/REPOACT2JavadocJUnitGLMP.git
+ */
+
+public class Producto {
 
     //Creación de objeto de clase Scanner para recibir el input del usuario.
     static Scanner sc = new Scanner(System.in);
