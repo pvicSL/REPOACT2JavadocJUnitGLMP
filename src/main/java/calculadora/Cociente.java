@@ -70,6 +70,7 @@ public class Cociente {
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
                 }
+                Cociente.menuCociente();
                 break;
 
             case 2:
@@ -84,6 +85,7 @@ public class Cociente {
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
                 }
+                Cociente.menuCociente();
                 break;
             case 3:
                 try {
@@ -96,6 +98,7 @@ public class Cociente {
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
                 }
+                Cociente.menuCociente();
                 break;
             case 4:
                 try {
@@ -108,6 +111,7 @@ public class Cociente {
                     //La línea siguiente limpia el flujo de entrada.
                     sc.nextLine();
                 }
+                Cociente.menuCociente();
                 break;
             case 5:
                 System.out.println("\nRegresando...\n");
